@@ -35,7 +35,7 @@ This project is a production-ready **clinical decision support tool** built usin
 
 4. **Run the Streamlit app**
    ```bash
-   export OPENAI_API_KEY="your-openai-key"
+   streamlit run app.py
 
 ---
 
