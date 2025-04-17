@@ -4,12 +4,11 @@ import pandas as pd
 from predict_readmit import predict_readmission
 from predict_icd import predict_icd
 
-# 🔐 Set your API key (suggest: use st.secrets for deployment)
-openai.api_key = "sk-proj-7abfEn2d1CODYph7JIViT3BlbkFJHn8QkewcV4I7IyUbPt6L"
+# Set your API key
+openai.api_key = ""
 
-# -----------------------
-# 🧾 Streamlit Input Form
-# -----------------------
+# Streamlit Input Form
+
 st.title("🩺 Clinical Risk & ICD Predictor")
 
 with st.form("patient_form"):
@@ -35,9 +34,8 @@ with st.form("patient_form"):
 
     submitted = st.form_submit_button("🔍 Predict Risk & Diagnoses")
 
-# -----------------------
-# 🧠 Prediction Logic
-# -----------------------
+# Prediction Logic
+
 if submitted:
     # Prepare input dict
     input_dict = {
@@ -77,9 +75,8 @@ if submitted:
         for block in chapter['top_blocks']:
             st.markdown(f"&nbsp;&nbsp;&nbsp;• {block['block']} — {block['prob']*100:.1f}%")
 
-    # -----------------------
-    # 🧠 Worded OpenAI Summary
-    # -----------------------
+    # Worded OpenAI Summary
+    
     st.subheader("📝 Clinical Summary")
 
     prompt = f"""
