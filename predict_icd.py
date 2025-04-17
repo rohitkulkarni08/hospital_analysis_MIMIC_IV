@@ -6,7 +6,7 @@ import numpy as np
 import os
 import gdown
 
-# Google Drive file IDs (replace with your actual links)
+# Google Drive file IDs
 CHAPTER_MODEL_ID = "1RKc4FyTyEvLDK_CU49SSdeWNIBd0MoeT"
 BLOCK_MODEL_ID = "1wFUsVc-OHqnFRyEAXG0EboYqU47-HGlF"
 CHAPTER_LABELS_ID = "1KHDnu8D2FxShwRbG4FB9sHoeYEiyAuyb"
